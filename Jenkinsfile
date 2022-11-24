@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('hello') {
       steps {
-        sh 'python3 text_Mail.py'
+        bat 'python3 text_Mail.py'
       }
     }
   }
