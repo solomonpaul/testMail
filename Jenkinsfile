@@ -1,12 +1,15 @@
 pipeline {
-    stages {
-        stage('Test') {
-            steps {
-              sh """
-              python --version
-              python ./text_Mail.py
-              """
-            }
-        }
+  agent any
+  stages {
+    stage('version') {
+      steps {
+        sh 'python3 --version'
+      }
     }
+    stage('hello') {
+      steps {
+        sh 'python3 text_Mail.py'
+      }
+    }
+  }
 }
