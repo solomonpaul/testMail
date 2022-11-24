@@ -8,7 +8,7 @@ pipeline {
     }
     stage('hello') {
       steps {
-        sh 'python3 smtpMail.py'
+        sh 'python3 text_Mail.py'
       }
     }
   }
